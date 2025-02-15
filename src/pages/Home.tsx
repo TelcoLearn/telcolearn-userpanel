@@ -5,7 +5,7 @@ function Home() {
     <div>
       <div>Home</div>
       <Button variant={"destructive"} size={"lg"}>
-        Click me
+        Click messsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
       </Button>
     </div>
   );
