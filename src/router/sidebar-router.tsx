@@ -19,8 +19,8 @@ export const data = {
         icon: SquareTerminal,
       },
       {
-        title: "Learning Coursera",
-        url: "/coursera",
+        title: "Coursera",
+        url: "/courses",
         icon: SquareTerminal,
       },
     ],

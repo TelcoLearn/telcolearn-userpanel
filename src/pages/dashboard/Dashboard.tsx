@@ -13,7 +13,7 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex border-b-2 h-16 shrink-0 items-center gap-2 justify-between pe-5 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="flex border-b-2 sticky top-0 h-16 shrink-0 items-center bg-black gap-2 justify-between pe-5 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
           </div>
@@ -41,7 +41,7 @@ export default function Page() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
-        <div className=" p-5 " >
+        <div className=" p-5 py-0  " >
           <Outlet />
         </div>
       </SidebarInset>

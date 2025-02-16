@@ -1,4 +1,5 @@
 export interface ICourse {
+    id?: number;
     image: string | any;
     title: string;
     description: string;
@@ -7,4 +8,12 @@ export interface ICourse {
     category: string;
     totalChapters: number;
     createdBy: string;
+}
+
+export interface IChapter {
+    id: number;
+    chapter: string;
+    chapterTitle: string;
+    content: string;
+    url: string;
 }
