@@ -1,12 +1,7 @@
 import * as React from "react";
 
 import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
@@ -15,7 +10,7 @@ export function TeamSwitcher({
 }: {
   teams: {
     name: string;
-    logo: React.ElementType;
+    logo: any;
     plan?: string;
   }[];
 }) {
@@ -24,23 +19,14 @@ export function TeamSwitcher({
   return (
     <SidebarMenu>
       <SidebarMenuItem>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <SidebarMenuButton
-              size="lg"
-              className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
-            >
-              <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                <activeTeam.logo className="size-4" />
-              </div>
-              <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-semibold">
-                  {activeTeam.name}
-                </span>
-              </div>
-            </SidebarMenuButton>
-          </DropdownMenuTrigger>
-        </DropdownMenu>
+        <div className="flex items-center justify-center w-full  rounded-lg overflow-hidden ">
+          <img
+            src={activeTeam.logo}
+            alt="Team Logo"
+            className="w-full  object-cover"
+          />
+        </div>
+
       </SidebarMenuItem>
     </SidebarMenu>
   );

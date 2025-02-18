@@ -48,7 +48,7 @@ export function NavMain({
                     <SidebarMenuButton
                       tooltip={item.title}
                       className={`flex items-center gap-2 px-4 py-3 rounded-md transition text-[18px] ${
-                        isActive ? "bg-white text-black font-bold" : "text-gray-500 hover:bg-gray-200 hover:text-black"
+                        isActive ? "bg-[#daddd8] text-[#161925] font-bold" : "text-gray-500 hover:bg-gray-200 hover:text-black"
                       }`}
                     >
                       {item.icon && <item.icon />}

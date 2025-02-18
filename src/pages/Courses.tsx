@@ -1,4 +1,4 @@
-import { ICourse } from "@/types/Course";
+import { ICourse } from "@/types/course.type";
 import { useState } from "react";
 import courseImage from "@/assets/image/download.jpeg";
 import courseImage2 from "@/assets/image/images.jpeg"
@@ -64,8 +64,8 @@ function Course() {
       <h1 className=" mb-6 text-commonHeader font-bold " >Learning Courses</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 justify-center items-center">
         {courseData.map((course, index) => (
-          <Link key={course?.id} to={`/chapter`}  className="w-full flex justify-center" state={{ id: course?.id }}>
-            <div className="max-w-sm rounded-lg overflow-hidden border hover:shadow-lg hover:shadow-white/50">
+          <Link key={course?.id} to={`/courses/chapter/${course.id}`}  className="w-full flex justify-center">
+            <div className="max-w-sm rounded-lg overflow-hidden border border-[#f5e9e2] hover:shadow-lg hover:shadow-[#f5e9e2]">
               <img className="w-full" src={course.image} alt="Course Image" />
               <div className="px-6 flex flex-col gap-3 py-4">
                 <div className="font-bold text-xl mb-2">{course.title}</div>

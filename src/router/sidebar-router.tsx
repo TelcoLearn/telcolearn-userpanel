@@ -1,14 +1,15 @@
 import {
-    GalleryVerticalEnd,
     SquareTerminal,
   } from "lucide-react";
+
+import logo from "@/assets/image/logo.png"             
   
 
 export const data = {
     teams: [
       {
         name: "Telco Learn Logo",
-        logo: GalleryVerticalEnd,
+        logo: logo,
         // plan: "Enterprise",
       },
     ],
@@ -19,7 +20,7 @@ export const data = {
         icon: SquareTerminal,
       },
       {
-        title: "Coursera",
+        title: "Courses",
         url: "/courses",
         icon: SquareTerminal,
       },

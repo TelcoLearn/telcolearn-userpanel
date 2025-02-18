@@ -7,21 +7,36 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Outlet } from "react-router";
+import imageAvtar from "@/assets/image/avtar.jpeg"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
+const userDetails = {
+  userName: "John Doe",
+  profileImage: imageAvtar,
+  email: "john.doe@example.com",
+  phoneNumber: "+1 123 456 7890",
+  id: 8896658745822146,
+}
 
 export default function Page() {
+  const userName = userDetails.userName || "User";
+  const initials = userName.substring(0, 2).toUpperCase();
   return (
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex border-b-2 sticky top-0 h-16 shrink-0 items-center bg-black gap-2 justify-between pe-5 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+        <header className="flex border-b-2 sticky top-0 h-16 shrink-0 items-center bg-[#18181B] gap-2 justify-between pe-5 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
           </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className=" w-[40px] h-[40px] flex justify-center items-center rounded-full border-2 border-white bg-black text-white  " >
-                SU
+              <Button variant="outline" className=" uppercase w-[40px] h-[40px] flex justify-center items-center rounded-full border-2 border-white bg-black text-white  " >
+                <Avatar>
+                  <AvatarImage src={userDetails.profileImage} />
+                  <AvatarFallback>{initials}</AvatarFallback>
+                </Avatar>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">

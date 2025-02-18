@@ -10,6 +10,10 @@ export interface ICourse {
     createdBy: string;
 }
 
+export interface ISection {
+    name: string;
+    chapter: IChapter[]
+}
 export interface IChapter {
     id: number;
     chapter: string;
